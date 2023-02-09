@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP Group project 1", "OOP Group project 1\OOP Group project 1.csproj", "{AB09F3D7-A667-40E7-9A02-2270DC36B3BD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classes and Appliances", "OOP Group project 1\Classes and Appliances.csproj", "{AB09F3D7-A667-40E7-9A02-2270DC36B3BD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

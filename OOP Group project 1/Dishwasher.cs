@@ -4,17 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OOP_Group_project_1
+namespace Classes_and_Appliances
 {
-    public class Dishwasher 
+    public class Dishwasher : Appliance
     {
         private string soundRating = string.Empty;
-        public double ItemNumber { get; set; }
-        public string Brand { get; set; }   
-        public double Quantity { get; set; }    
-        public double Wattage { get; set; }
-        public string Color { get; set; }
-        public double Price { get; set; }
         public string Feature { get; set; }
         public string SoundRating
         {
@@ -45,16 +39,15 @@ namespace OOP_Group_project_1
                 }
             }
         }
-        public string Feature { get; set; }
 
         public static Dishwasher Parse(string s)
         {
             string[] args = s.Split(';');
 
             Dishwasher dishwasher = new Dishwasher();
-            dishwasher.ItemNumber = double.Parse(args[0]);
+            dishwasher.ItemNumber = long.Parse(args[0]);
             dishwasher.Brand = args[1];
-            dishwasher.Quantity = double.Parse(args[2]);
+            dishwasher.Quantity = int.Parse(args[2]);
             dishwasher.Wattage = double.Parse(args[3]);
             dishwasher.Color = args[4];
             dishwasher.Price = double.Parse(args[5]);
@@ -66,15 +59,18 @@ namespace OOP_Group_project_1
 
         public override string ToString()
         {
-            string s = $"Item Number: {ItemNumber}\n"
-                + $"Brand: {Brand}\n"
-                + $"Quantity: {Quantity}\n"
-                + $"Wattage: {Wattage}\n"
-                + $"Color: {Color}\n"
-                + $"Price: {Price}\n"
+            string s = base.ToString()
                 + $"Feature: {Feature}\n"
                 + $"SoundRating: {SoundRating}\n";
             return s; 
+        }
+
+        public override string FormatForFile()
+        {
+            string s = base.ToString()
+                + $"Feature: {Feature}\n"
+                + $"SoundRating: {SoundRating}\n";
+            return s;
         }
     }
 }

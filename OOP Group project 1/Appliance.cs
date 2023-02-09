@@ -22,7 +22,7 @@ namespace Classes_and_Appliances
         public void Checkout()
         { 
         }
-        public string FormatForFile()
+        public virtual string FormatForFile()
         {
             string[] args =
             {
