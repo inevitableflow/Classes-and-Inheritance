@@ -17,9 +17,9 @@ Override the ToString() method in each one of these classes, so that the data is
 The attributes should be displayed using vertical headers.
 
 Task 4: Class Dishwashers - Raquel <br>
-Ensure that each of these classes has a user-defined constructor that assigns the appropriate attributes. <br>
-Override the ToString() method in each one of these classes, so that the data is in a human readable form. <br>
-The attributes should be displayed using vertical headers.
+- [x] Ensure that each of these classes has a user-defined constructor that assigns the appropriate attributes. <br>
+- [x] Override the ToString() method in each one of these classes, so that the data is in a human readable form. <br>
+- [x] The attributes should be displayed using vertical headers.
 
 Task 5: Method List - Gail <br>
 A method that parses the appliances.txt file into a single list <br>
