@@ -15,6 +15,7 @@ namespace OOP_Group_project_1
         public double Wattage { get; set; }
         public string Color { get; set; }
         public double Price { get; set; }
+        public string Feature { get; set; }
         public string SoundRating
         {
             get
@@ -57,13 +58,24 @@ namespace OOP_Group_project_1
             dishwasher.Wattage = double.Parse(args[3]);
             dishwasher.Color = args[4];
             dishwasher.Price = double.Parse(args[5]);
-            dishwasher.SoundRating = args[6];
-            dishwasher.Feature = args[7];
+            dishwasher.Feature = args[6];
+            dishwasher.SoundRating = args[7];
 
             return dishwasher;
         }
 
-
+        public override string ToString()
+        {
+            string s = $"Item Number: {ItemNumber}\n"
+                + $"Brand: {Brand}\n"
+                + $"Quantity: {Quantity}\n"
+                + $"Wattage: {Wattage}\n"
+                + $"Color: {Color}\n"
+                + $"Price: {Price}\n"
+                + $"Feature: {Feature}\n"
+                + $"SoundRating: {SoundRating}\n";
+            return s; 
+        }
     }
 }
 
