@@ -72,7 +72,7 @@ namespace Classes_And_Inheritance
         }
         static int ChooseOptionFromMenu()
         {
-            Console.WriteLine("Welcome to MOdern Appliances!\n"
+            Console.WriteLine("\nWelcome to Modern Appliances!\n"
                 + "How May We Assist You? \n"
                 + "1 - Check out appliance \n"
                 + "2 - Find appliances by brand \n"
@@ -135,7 +135,6 @@ namespace Classes_And_Inheritance
                 {
                     Console.WriteLine(appliance.ToString());
                     found = true;
-                    break;
                 }
             }
             if (!found)
