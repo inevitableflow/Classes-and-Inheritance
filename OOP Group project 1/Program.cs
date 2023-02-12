@@ -47,22 +47,6 @@ namespace Classes_And_Inheritance
             return a;
         } // CreateAppliance
 
-        static Appliance Quantity(List<Appliance> appliances)
-        {
-            Appliance a = appliances.First();
-            foreach (Appliance appliance in appliances)
-            {
-                /*
-                if (appliance.Quantity == Quantity)
-                {
-                    a = appliance;
-                }
-                */
-            }
-            return a;
-
-        } // Quantity
-
         static List<Appliance> ReadApplianceFromFile(string filename)
         {
             List<Appliance> list = new List<Appliance>();
@@ -163,7 +147,14 @@ namespace Classes_And_Inheritance
         static void DisplayRandomAppliances(List<Appliance> list)
         {
             Console.WriteLine("Enter number of appliances: ");
-            int Quantity = int.Parse(Console.ReadLine());
+            int quantity = int.Parse(Console.ReadLine());
+            Random rnd = new Random();
+            for (int i = 0; i<quantity; i++)
+            {
+                int a = rnd.Next(0,list.Count);
+                Appliance appliance = list.ElementAt(a);
+                Console.WriteLine(appliance.ToString());
+            }
         } // DisplayRandomAppliances
 
     } // class Program
