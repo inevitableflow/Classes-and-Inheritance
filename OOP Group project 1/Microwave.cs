@@ -5,13 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Classes_And_Inheritance
-
+{
     public class Microwave : Appliance
     {
         private string roomType = string.Empty;
         public double Capacity { get; set; }
         public string RoomType 
-        { get
+        { 
+            get
             {
                 return roomType;
             }
