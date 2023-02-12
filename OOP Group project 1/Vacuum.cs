@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assignment1
+namespace Classes_And_Inheritance
 {
     public class Vacuum : Appliance
     {

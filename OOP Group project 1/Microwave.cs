@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Classes_and_Appliances
-{
-    public class Microwave : Appliances 
+namespace Classes_And_Inheritance
+
+    public class Microwave : Appliance
     {
         private string roomType = string.Empty;
         public double Capacity { get; set; }

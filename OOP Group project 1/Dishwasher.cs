@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Classes_and_Appliances
+namespace Classes_And_Inheritance
 {
     public class Dishwasher : Appliance
     {
@@ -67,9 +67,13 @@ namespace Classes_and_Appliances
 
         public override string FormatForFile()
         {
-            string s = base.ToString()
-                + $"Feature: {Feature}\n"
-                + $"SoundRating: {SoundRating}\n";
+            string[] args =
+            {
+                base.FormatForFile(),
+                Feature,
+                SoundRating
+            };
+            string s = string.Join(";", args);
             return s;
         }
     }

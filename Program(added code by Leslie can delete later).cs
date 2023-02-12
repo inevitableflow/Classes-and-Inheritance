@@ -9,9 +9,10 @@ namespace Assignment_Inheritance.Properties
 {
     class Program
     {
-        //Add the program when the user types in an item number
+    
         static void Main(string[] args)
         {
+           //Method that allows customer to purchase an appliance
             List<Appliance> appliances = ReadAppliancesFromFile("appliances.txt");
 
             Console.WriteLine("Enter the item number of an appliance: ");
@@ -27,8 +28,9 @@ namespace Assignment_Inheritance.Properties
             foundAppliance.Checkout();
             WriteAppliancesToFile("appliances.txt", appliances);
 
+            // CHECK AVAILABILITY!!!!!!!!!!!
 
-            // Add the program when entering brand
+            // Method to search for brand
 
             Console.WriteLine("Enter the brand of the appliances you want to display: ");
             string brand = Console.ReadLine();

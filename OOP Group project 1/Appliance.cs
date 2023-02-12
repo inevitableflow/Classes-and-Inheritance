@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Classes_and_Appliances
+namespace Classes_And_Inheritance
 {
     public class Appliance
     {
@@ -17,11 +17,21 @@ namespace Classes_and_Appliances
 
         public bool IsAvailable()
         {
-            return true;
+            return Quantity > 0;
         }
         public void Checkout()
-        { 
+        {
+            if (IsAvailable())
+            {
+               Quantity--;
+               Console.WriteLine($"Appliance {ItemNumber} has been checked out.");
+            }
+            else
+            {
+                Console.WriteLine("The appliance is not available to be checked out.");
+            }
         }
+    
         public virtual string FormatForFile()
         {
             string[] args =
