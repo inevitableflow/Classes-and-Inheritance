@@ -21,7 +21,7 @@ namespace Classes_And_Inheritance
                 Execute(option, list);
             }
 
-        }  // main
+        }  // Main
 
         static Appliance CreateAppliance(string line)
         {
@@ -45,7 +45,7 @@ namespace Classes_And_Inheritance
                 a = Dishwasher.Parse(line);
             }
             return a;
-        } // createappliance
+        } // CreateAppliance
 
         static Appliance Quantity(List<Appliance> appliances)
         {
@@ -100,7 +100,7 @@ namespace Classes_And_Inheritance
 
             int itemNumber = int.Parse(Console.ReadLine());
             return itemNumber;
-        } //ChooseOptionFromMenu 
+        } // ChooseOptionFromMenu 
 
         static void Execute(int option, List<Appliance> list)
         {
@@ -122,7 +122,7 @@ namespace Classes_And_Inheritance
                     WriteApplianceToFile("appliances.txt", list);
                     break;
             }
-        } // execute menu
+        } // Execute 
 
         static void Checkout(List<Appliance> list)
         {
@@ -137,7 +137,7 @@ namespace Classes_And_Inheritance
             }
 
             foundAppliance.Checkout();
-        } // checkout
+        } // Checkout
 
         static void FindByBrand(List<Appliance> list)
         {
@@ -158,13 +158,13 @@ namespace Classes_And_Inheritance
             {
                 Console.WriteLine("No appliances brand found.");
             }
-        } // findbybrand
+        } // FindByBrand
 
         static void DisplayRandomAppliances(List<Appliance> list)
         {
             Console.WriteLine("Enter number of appliances: ");
             int Quantity = int.Parse(Console.ReadLine());
-        } // displayrandomappliances
+        } // DisplayRandomAppliances
 
     } // class Program
 } // namespace
