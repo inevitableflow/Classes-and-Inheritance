@@ -13,33 +13,19 @@ namespace Classes_And_Inheritance
     {
         static void Main(string[] args)
         {
+            List<Appliance> list = ReadApplianceFromFile("..\\..\\res\\appliances.txt");
             int option = ChooseOptionFromMenu();
-            Execute(option);
+            Execute(option, list);
 
             // Method that allows customer to purchase an appliance
-            List<Appliance> appliances = ReadApplianceFromFile("..\\..\\res\\appliances.txt");
-
-            Console.WriteLine("Enter the item number of an appliance: ");
-            long itemNumber = long.Parse(Console.ReadLine());
-
-            var foundAppliance = appliances.FirstOrDefault(a => a.ItemNumber == itemNumber);
-            if (foundAppliance == null)
-            {
-                Console.WriteLine("No appliance found with that item number.");
-                return;
-            }
-
-            foundAppliance.Checkout();
-            WriteApplianceToFile("appliances.txt", appliances);
-
-
+           
             // Method to search for brand
 
             Console.WriteLine("Enter the brand of the appliances you want to display: ");
             string brand = Console.ReadLine();
 
             bool found = false;
-            foreach (Appliance appliance in appliances)
+            foreach (Appliance appliance in list)
             {
                 if (appliance.Brand.ToLower() == brand.ToLower())
                 {
@@ -144,15 +130,15 @@ namespace Classes_And_Inheritance
             return itemNumber;
         } //ChooseOptionFromMenu 
 
-        static void Execute(int option)
+        static void Execute(int option, List<Appliance> list)
         {
             switch (option)
             {
                 case 1:
-                    //check out
+                    Checkout(list);
                     break;
                 case 2:
-                    //find by brand
+                    FindByBrand(list);
                     break;
                 case 3:
                     //display by type
@@ -161,9 +147,45 @@ namespace Classes_And_Inheritance
                     //produce random list
                     break;
                 case 5:
-                    //save and exit
+                    WriteApplianceToFile("appliances.txt", list);
                     break;
             }
         } // execute menu
+
+        static void Checkout(List<Appliance> list)
+        {
+            Console.WriteLine("Enter the item number of an appliance: ");
+            long itemNumber = long.Parse(Console.ReadLine());
+
+            var foundAppliance = list.FirstOrDefault(a => a.ItemNumber == itemNumber);
+            if (foundAppliance == null)
+            {
+                Console.WriteLine("No appliance found with that item number.");
+                return;
+            }
+
+            foundAppliance.Checkout();
+        } // checkout
+
+        static void FindByBrand(List<Appliance> list)
+        {
+            Console.WriteLine("Enter the brand of the appliances you want to display: ");
+            string brand = Console.ReadLine();
+
+            bool found = false;
+            foreach (Appliance appliance in list)
+            {
+                if (appliance.Brand.ToLower() == brand.ToLower())
+                {
+                    Console.WriteLine(appliance.ToString());
+                    found = true;
+                    break;
+                }
+            }
+            if (!found)
+            {
+                Console.WriteLine("No appliances brand found.");
+            }
+        } // findbybrand
     } // class Program
 } // namespace
