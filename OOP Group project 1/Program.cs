@@ -13,6 +13,8 @@ namespace Classes_And_Inheritance
     {
         static void Main(string[] args)
         {
+            int option = ChooseOptionFromMenu();
+            Execute(option);
 
             // Method that allows customer to purchase an appliance
             List<Appliance> appliances = ReadApplianceFromFile("..\\..\\res\\appliances.txt");
@@ -126,6 +128,42 @@ namespace Classes_And_Inheritance
                 file.Write(s);
             }
         }
+        static int ChooseOptionFromMenu()
+        {
+            Console.WriteLine("Welcome to MOdern Appliances!\n"
+                + "How May We Assist You? \n"
+                + "1 - Check out appliance \n"
+                + "2 - Find appliances by brand \n"
+                + "3 - Display appliances by type \n"
+                + "4 - Produce random appliance list \n"
+                + "5 - Save & exit\n"
+                + " \n"
+                + "Enter option:\n");
 
+            int itemNumber = int.Parse(Console.ReadLine());
+            return itemNumber;
+        } //ChooseOptionFromMenu 
+
+        static void Execute(int option)
+        {
+            switch (option)
+            {
+                case 1:
+                    //check out
+                    break;
+                case 2:
+                    //find by brand
+                    break;
+                case 3:
+                    //display by type
+                    break;
+                case 4:
+                    //produce random list
+                    break;
+                case 5:
+                    //save and exit
+                    break;
+            }
+        } // execute menu
     } // class Program
 } // namespace
