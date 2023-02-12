@@ -14,43 +14,15 @@ namespace Classes_And_Inheritance
         static void Main(string[] args)
         {
             List<Appliance> list = ReadApplianceFromFile("..\\..\\res\\appliances.txt");
-            int option = ChooseOptionFromMenu();
-            Execute(option, list);
-
-            // Method that allows customer to purchase an appliance
-           
-            // Method to search for brand
-
-            Console.WriteLine("Enter the brand of the appliances you want to display: ");
-            string brand = Console.ReadLine();
-
-            bool found = false;
-            foreach (Appliance appliance in list)
+            int option = 0;
+            while (option != 5) 
             {
-                if (appliance.Brand.ToLower() == brand.ToLower())
-                {
-                    Console.WriteLine(appliance.ToString());
-                    found = true;
-                    break;
-                }
+                option = ChooseOptionFromMenu();
+                Execute(option, list);
             }
-            if (found)
-            { }
-            else
-            {
-                Console.WriteLine("No appliances brand found.");
-            }
-
-
-            // Method that displays number of random appliances
-
-            Console.WriteLine("Enter number of appliances: ");
-            int Quantity = int.Parse(Console.ReadLine());
 
         }  // main
 
-
-        //Method that parses txt file into a list
         static Appliance CreateAppliance(string line)
         {
             Appliance a = null;
@@ -73,7 +45,7 @@ namespace Classes_And_Inheritance
                 a = Dishwasher.Parse(line);
             }
             return a;
-        } // CreateAppliance
+        } // createappliance
 
         static Appliance Quantity(List<Appliance> appliances)
         {
@@ -144,7 +116,7 @@ namespace Classes_And_Inheritance
                     //display by type
                     break;
                 case 4:
-                    //produce random list
+                    DisplayRandomAppliances(list);
                     break;
                 case 5:
                     WriteApplianceToFile("appliances.txt", list);
@@ -187,5 +159,12 @@ namespace Classes_And_Inheritance
                 Console.WriteLine("No appliances brand found.");
             }
         } // findbybrand
+
+        static void DisplayRandomAppliances(List<Appliance> list)
+        {
+            Console.WriteLine("Enter number of appliances: ");
+            int Quantity = int.Parse(Console.ReadLine());
+        } // displayrandomappliances
+
     } // class Program
 } // namespace
