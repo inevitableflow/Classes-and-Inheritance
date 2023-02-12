@@ -17,12 +17,12 @@ namespace Classes_And_Inheritance
 
             set
             {
-                switch (value.ToLower())
+                switch (value)
                 {
-                    case "18V":
+                    case "18":
                         batteryVoltage = "Low";
                         break;
-                    case "24V":
+                    case "24":
                         batteryVoltage = "High";
                         break;
                     default:

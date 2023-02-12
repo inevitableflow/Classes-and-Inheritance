@@ -15,7 +15,7 @@ namespace Classes_And_Inheritance
         {
 
             // Method that allows customer to purchase an appliance
-            List<Appliance> appliances = ReadApplianceFromFile("appliances.txt");
+            List<Appliance> appliances = ReadApplianceFromFile("..\\..\\res\\appliances.txt");
 
             Console.WriteLine("Enter the item number of an appliance: ");
             long itemNumber = long.Parse(Console.ReadLine());

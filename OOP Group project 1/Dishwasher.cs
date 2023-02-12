@@ -18,7 +18,7 @@ namespace Classes_And_Inheritance
             }
             set
             {
-                switch (value.ToLower())
+                switch (value)
                 {
                     case "Qt":
                         soundRating = "Quietest";
