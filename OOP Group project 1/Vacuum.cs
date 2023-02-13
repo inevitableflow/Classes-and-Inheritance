@@ -64,6 +64,11 @@ namespace Classes_And_Inheritance
                 + $"Grade: {Grade}\n";
             return s;
         }
+
+        public override bool Matches(string option)
+        {
+            return option == BatteryVoltage;
+        }
     }
 }
 

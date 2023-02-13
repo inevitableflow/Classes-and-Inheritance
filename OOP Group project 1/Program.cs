@@ -69,7 +69,7 @@ namespace Classes_And_Inheritance
                 string s = appliance.FormatForFile();
                 file.Write(s);
             }
-        }
+        } // WriteApplianceToFile
         static int ChooseOptionFromMenu()
         {
             Console.WriteLine("\nWelcome to Modern Appliances!\n"
@@ -97,7 +97,8 @@ namespace Classes_And_Inheritance
                     FindByBrand(list);
                     break;
                 case 3:
-                    //display by type
+                    int appOption = ChooseOptionFromApplianceMenu(list);
+                    ExecuteApplianceMenu(appOption, list);
                     break;
                 case 4:
                     DisplayRandomAppliances(list);
@@ -156,5 +157,121 @@ namespace Classes_And_Inheritance
             }
         } // DisplayRandomAppliances
 
-    } // class Program
+         static int ChooseOptionFromApplianceMenu (List<Appliance> list)
+        {
+            Console.WriteLine("\nAppliance Types \n"
+                +"1 - Refrigerators \n"
+                +"2 - Vacuums \n"
+                +"3 - Microwaves \n"
+                +"4 - Dishwashers \n"
+                +"Enter type of appliance: ");
+
+            int applianceType = int.Parse(Console.ReadLine());
+            return applianceType;
+
+        } //ChooseOptionFromApplianceMenu
+
+        static void ExecuteApplianceMenu(int option, List<Appliance> list)
+        {
+            switch (option)
+            {
+                case 1:
+                    RefrigeratorMenu(list);
+                    break;
+                case 2:
+                    VacuumMenu(list);
+                    break;
+                case 3:
+                    MicrowaveMenu(list);
+                    break;
+                case 4:
+                    DishwasherMenu(list);
+                    break;
+            }
+        }
+
+        static void RefrigeratorMenu(List<Appliance> list)
+        {
+            Console.WriteLine("Enter number of doors. 2 (double doors), 3 (three doors) or 4 (four doors): ");
+            string option = Console.ReadLine();
+            Console.WriteLine("\nMatching refrigerators: ");
+            if (option == "2")
+            {
+                option = "double doors";
+            } else if (option == "3")
+            {
+                option = "three doors";
+            } else if (option == "4")
+            {
+                option = "four doors";
+            }
+            PrintMatching(list, option);
+        } //RefrigeratorMenu
+
+        static void VacuumMenu(List<Appliance> list)
+        {
+            Console.WriteLine("Enter battery voltage value. 18 V (low) or 24 V (high): ");
+            string option = Console.ReadLine();
+            Console.WriteLine("\nMatching vacuums: ");
+            if (option == "18")
+            {
+                option = "Low";
+            }
+            else if (option == "24")
+            {
+                option = "High";
+            }
+            PrintMatching(list, option);
+        } //VacuumMenu
+
+        static void MicrowaveMenu(List<Appliance> list)
+        {
+            Console.WriteLine("Room where the microwave will be installed. K (kitchen) or W (work site): ");
+            string option = Console.ReadLine();
+            Console.WriteLine("\nMatching microwaves: ");
+            if (option.ToLower() == "k")
+            {
+                option = "kitchen";
+            }
+            else if (option.ToLower() == "w")
+            {
+                option = "work";
+            }
+            PrintMatching(list, option);
+        } // MicrowaveMenu
+        static void DishwasherMenu(List<Appliance> list)
+        {
+            Console.WriteLine("Enter the sound rating of the dishwasher: Qt (Quietest), Qr (Quieter), Qu(Quiet) or M (Moderate): ");
+            string option = Console.ReadLine();
+            Console.WriteLine("\nMatching diswashers: ");
+            if (option.ToLower() == "qt")
+            {
+                option = "Quietest";
+            }
+            else if (option.ToLower() == "qr")
+            {
+                option = "Quieter";
+            }
+            else if (option.ToLower() == "qu")
+            {
+                option = "Quiet";
+            }
+            else if (option.ToLower() == "m")
+            {
+                option = "Moderate";
+            }
+            PrintMatching(list, option);
+        } // DishwasherMenu
+
+        static void PrintMatching(List<Appliance> list, string option)
+        {
+            foreach (Appliance appliance in list)
+            {
+                if (appliance.Matches(option))
+                {
+                    Console.WriteLine(appliance.ToString());
+                }
+            }
+        }
+    } // classs Program
 } // namespace

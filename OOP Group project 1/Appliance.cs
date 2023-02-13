@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Classes_And_Inheritance
 {
-    public class Appliance
+    public abstract class Appliance
     {
         public long ItemNumber { get; set; }
         public string Brand { get; set; }
@@ -56,5 +57,7 @@ namespace Classes_And_Inheritance
                     + $"Price: {Price}\n";
             return s;
         }
+
+        public abstract bool Matches(string option);
     }
 }

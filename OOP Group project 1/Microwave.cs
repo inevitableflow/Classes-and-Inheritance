@@ -66,6 +66,9 @@ namespace Classes_And_Inheritance
                 + $"Room Type: {RoomType}\n";
             return s;
         }
-
+        public override bool Matches(string option)
+        {
+            return option == RoomType;
+        }
     }
 }

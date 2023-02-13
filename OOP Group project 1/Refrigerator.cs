@@ -66,5 +66,9 @@ namespace Classes_And_Inheritance
             return s;
 
         }
+        public override bool Matches(string option)
+        {
+            return option.ToLower().Equals(NumberOfDoors.ToLower());
+        }
     }
 }
