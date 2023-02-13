@@ -1,11 +1,11 @@
 # Classes-and-Inheritance
-CPRG 211 Group Assignment 1
-Members: Raquel Fernandes Castoldi, Gail Javier, Leslie Evangelista
+CPRG 211 Group Assignment 1 <br>
+Members: Raquel Fernandes Castoldi, Gail Javier, Leslie Evangelista <br>
 
 Peer Assessment: 
-Raquel: 10/10, 10/10
-Gail: 10/10, 10/10
-Leslie: 10/10, 10/10
+Raquel: 10/10, 10/10 <br>
+Gail: 10/10, 10/10 <br>
+Leslie: 10/10, 10/10<br>
 
 Task 1: Class Refrigerators - Gail<br>
 Ensure that each of these classes has a user-defined constructor that assigns the appropriate attributes.<br>
