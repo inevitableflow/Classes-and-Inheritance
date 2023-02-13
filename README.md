@@ -1,5 +1,11 @@
 # Classes-and-Inheritance
 CPRG 211 Group Assignment 1
+Members: Raquel Fernandes Castoldi, Gail Javier, Leslie Evangelista
+
+Peer Assessment: 
+Raquel: 10/10, 10/10
+Gail: 10/10, 10/10
+Leslie: 10/10, 10/10
 
 Task 1: Class Refrigerators - Gail<br>
 Ensure that each of these classes has a user-defined constructor that assigns the appropriate attributes.<br>
@@ -17,9 +23,9 @@ Override the ToString() method in each one of these classes, so that the data is
 The attributes should be displayed using vertical headers.
 
 Task 4: Class Dishwashers - Raquel <br>
-- [x] Ensure that each of these classes has a user-defined constructor that assigns the appropriate attributes. <br>
-- [x] Override the ToString() method in each one of these classes, so that the data is in a human readable form. <br>
-- [x] The attributes should be displayed using vertical headers.
+Ensure that each of these classes has a user-defined constructor that assigns the appropriate attributes. <br>
+Override the ToString() method in each one of these classes, so that the data is in a human readable form. <br>
+The attributes should be displayed using vertical headers.
 
 Task 5: Method List - Gail <br>
 A method that parses the appliances.txt file into a single list <br>
