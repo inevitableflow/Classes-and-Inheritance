@@ -2,7 +2,7 @@
 CPRG 211 Group Assignment 1 <br>
 Members: Raquel Fernandes Castoldi, Gail Javier, Leslie Evangelista <br>
 
-Peer Assessment: 
+Peer Assessment: <br>
 Raquel: 10/10, 10/10 <br>
 Gail: 10/10, 10/10 <br>
 Leslie: 10/10, 10/10<br>
